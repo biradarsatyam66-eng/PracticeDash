@@ -1,0 +1,60 @@
+<h3 class="text-center"><strong class="text-danger border-bottom border-danger">TODO CRUD</strong></h3>
+
+<hr class="bg-primary">
+
+<h4 class="bg-secondary text-center font-weight-bold text-white rounded p-2">{{isineditMode?'UPDATE TODO':'ADD TODO'}}</h4>
+
+<div class="row mb-5">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label class="font-weight-bold" for="todoitem">TODO ITEM:-</label>
+            <input 
+            #todoInput
+            type="text" class="form-control">
+        </div>
+
+        <div>
+            <button 
+            *ngIf="!isineditMode"
+            (click)="onAdd(todoInput)"
+            mat-raised-button color="primary"
+            class="w-100">ADD TODO</button>
+
+            <button 
+            *ngIf="isineditMode"
+            (click)="onUpdate(todoInput)"
+            mat-raised-button color="accent"
+            class="w-100">UPDATE TODO</button>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <ul class="list-group" *ngIf="todoarr.length > 0;else: noTodo">
+            <li 
+            *ngFor="let todo of todoarr"
+            class="list-group-item d-flex justify-content-between">
+                <strong>
+                    {{todo.todoitem}}
+                </strong>
+
+                <strong>
+                    <button 
+                    (click)="onEdit(todo, todoInput)"
+                    mat-mini-fab color="primary" class="mr-2">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+
+                    <button 
+                    (click)="onremove(todo.todoid)"
+                    mat-mini-fab color="warn">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </strong>
+            </li>
+        </ul>
+        <ng-template #noTodo>
+            <div class="alert alert-warning">
+                NO DATA FOUND !!!!
+            </div>
+        </ng-template>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+<div class="card mb-3 mobilCard">
+    <div 
+    [ngClass]="{
+        noproduct : !getmobile.isAvailable
+    }"
+    class="card-body">
+        <div class="row">
+            <div class="col-md-4">
+                <img 
+                [src]="getmobile.image || 'https://placehold.net/600x600.png'" 
+                [alt]="getmobile.name" 
+                [title]="getmobile.name">
+
+                <div class="d-flex justify-content-between mt-3">
+                    <button 
+                    [disabled]="!getmobile.isAvailable"
+                    class="btn btn-outline-warning">ADD TO CART</button>
+
+                    <button
+                    [disabled]="!getmobile.isAvailable"
+                    class="btn btn-outline-primary">BUY NOW</button>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <h2>{{getmobile.brand}}
+                    <small 
+                    [ngClass]="{
+                        'badge-success': getmobile.rating >=4,
+                        'badge-warning': getmobile.rating < 4 && getmobile.rating >=3,
+                        'badge-danger': getmobile.rating < 3
+                    }"
+                    class="badge">&#9733; {{getmobile.rating}}</small>
+                </h2>
+                <ul class="list-group list-group-flush">
+                    <li 
+                    *ngFor="let feature of getmobile.features"
+                    class="list-group-item">{{feature}}</li>
+                </ul>
+            </div>
+
+            <div class="col-md-2">
+                <h3>
+                    {{getmobile.price - (getmobile.price*.15) | currency:'INR'}}
+                    <br>
+                    <small>
+                        <del>
+                            {{getmobile.price}}
+                        </del>
+                    </small>
+                </h3>
+
+                <strong 
+                *ngIf="getmobile.noOfItems < 10"
+                class="text-success">
+                    Only {{getmobile.noOfItems}} Left!!
+                </strong>
+            </div>
+        </div>
+    </div>
+
+    <p 
+    *ngIf="!getmobile.isAvailable"
+    class="noProduct">
+        <strong>PRODUCT NOT AVAILABLE !!!</strong>
+    </p>
+</div>

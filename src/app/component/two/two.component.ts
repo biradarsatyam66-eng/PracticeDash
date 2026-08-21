@@ -8,6 +8,9 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TwoComponent implements OnInit {
 
   @Input() getmsg !: string
+  @Input() getpost : any[] = []
+
+
   constructor() { }
 
   ngOnInit(): void {

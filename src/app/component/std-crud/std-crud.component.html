@@ -1,0 +1,88 @@
+<h3 class="text-center"><strong class="text-danger border-bottom border-danger">STD CRUD</strong></h3>
+<hr class="bg-primary">
+
+<h4 class="bg-primary text-center font-weight-bold text-white p-2 rounded">{{isineditmode?'UPDATE STD':'ADD STD'}}</h4>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label class="font-weight-bold" for="fname">FIRST NAME:-</label>
+            <input 
+            #fname
+            type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label class="font-weight-bold" for="lname">LAST NAME:-</label>
+            <input 
+            #lname
+            type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label class="font-weight-bold" for="email">EMAIL:-</label>
+            <input 
+            #email
+            type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label class="font-weight-bold" for="contact">CONTACT:-</label>
+            <input 
+            #contact
+            type="number" class="form-control">
+        </div>
+
+        <div>
+            <button
+            *ngIf="!isineditmode"
+            (click)="onADD()"
+            mat-raised-button color="primary"
+            class="w-100">ADD STD</button>
+            <button 
+            *ngIf="isineditmode"
+            (click)="onUpdate()"
+            mat-raised-button color="accent"
+            class="w-100">UPDATE STD</button>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="table table-responsive">
+            <table 
+            *ngIf="StdArr.length > 0; else nodata" 
+            class="table table-bordered table-striped">
+                <thead class="text-center">
+                    <tr>
+                        <th>SR.NO</th>
+                        <th>FULL NAME</th>
+                        <th>EMAIL</th>
+                        <th>CONTACT</th>
+                        <th>EDIT</th>
+                        <th>DELETE</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <tr *ngFor="let std of StdArr;index as i">
+                        <td>{{i + 1}}</td>
+                        <td>{{std.fname}} {{std.lname}}</td>
+                        <td>{{std.email}}</td>
+                        <td>{{std.contact}}</td>
+                        <td><button 
+                            (click)="onEdit(std)"
+                            mat-mini-fab color="primary" class="mr-2">
+                                <mat-icon>edit</mat-icon>
+                            </button></td>
+                        <td><button 
+                            (click)="onDelete(std.stdId)"
+                            mat-mini-fab color="warn">
+                                <mat-icon>delete</mat-icon>
+                            </button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <ng-template #nodata>
+                <div class="alert alert-warning font-weight-bold">NO INFO FOUND !!!!</div>
+            </ng-template>
+        </div>
+    </div>
+</div>

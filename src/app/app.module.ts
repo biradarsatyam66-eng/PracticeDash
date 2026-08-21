@@ -11,6 +11,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { OneComponent } from './component/one/one.component';
 import { TwoComponent } from './component/two/two.component';
+import { PostDashboardComponent } from './component/post-dashboard/post-dashboard.component';
+import { PostCardComponent } from './component/post-card/post-card.component';
+import { MobileDashboardComponent } from './component/mobile-dashboard/mobile-dashboard.component';
+import { MobileCardComponent } from './component/mobile-card/mobile-card.component';
+import { StdCrudComponent } from './component/std-crud/std-crud.component';
+import { TodoCrudComponent } from './component/todo-crud/todo-crud.component';
 
 
 @NgModule({
@@ -18,7 +24,13 @@ import { TwoComponent } from './component/two/two.component';
     AppComponent,
     MachineTestComponent,
     OneComponent,
-    TwoComponent
+    TwoComponent,
+    PostDashboardComponent,
+    PostCardComponent,
+    MobileDashboardComponent,
+    MobileCardComponent,
+    StdCrudComponent,
+    TodoCrudComponent
   ],
   imports: [
     BrowserModule,

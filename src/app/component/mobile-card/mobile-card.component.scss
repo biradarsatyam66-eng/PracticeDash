@@ -1,0 +1,25 @@
+.mobilCard{
+    .card-body{
+        img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+    }
+    .noproduct{
+        filter: blur(1px) grayscale(1);
+    }
+
+    .noProduct{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: red;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
