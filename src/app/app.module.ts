@@ -17,6 +17,8 @@ import { MobileDashboardComponent } from './component/mobile-dashboard/mobile-da
 import { MobileCardComponent } from './component/mobile-card/mobile-card.component';
 import { StdCrudComponent } from './component/std-crud/std-crud.component';
 import { TodoCrudComponent } from './component/todo-crud/todo-crud.component';
+import { MovieDashbordComponent } from './movie-dashbord/movie-dashbord.component';
+import { MovieCardComponent } from './movie-card/movie-card.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { TodoCrudComponent } from './component/todo-crud/todo-crud.component';
     MobileDashboardComponent,
     MobileCardComponent,
     StdCrudComponent,
-    TodoCrudComponent
+    TodoCrudComponent,
+    MovieDashbordComponent,
+    MovieCardComponent
   ],
   imports: [
     BrowserModule,

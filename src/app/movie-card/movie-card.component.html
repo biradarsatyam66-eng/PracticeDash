@@ -1,0 +1,38 @@
+<div class="card mobileCard mb-3">
+    <figure>
+        <img 
+        src="http://image.tmdb.org/t/p/w500/{{movieobj.backdrop_path || movieobj.poster_path}}" 
+        [alt]="movieobj.title || movieobj.original_title"
+        [title]="movieobj.title || movieobj.original_title">
+    </figure>
+    <figcaption>
+        <div class="titlecontent">
+            <div class="row">
+                <div class="col-md-10 movieContent">
+                    <h3>{{movieobj.original_title || movieobj.title}}</h3>
+                </div>
+
+                <div class="col-md-2">
+                    <span 
+                    [ngClass]="{
+                        'badge-success': movieobj.vote_average >= 7,
+                        'badge-warning': movieobj.vote_average < 7 && movieobj.vote_average >= 5,
+                        'badge-danger' : movieobj.vote_average < 5
+
+                    }"
+                    class="badge p-2">&#9734; {{movieobj.vote_average}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="overview">
+            <h2 class="mb-0">
+                <em>
+                    {{movieobj.original_title || movieobj.title}}-
+                </em>
+            </h2>
+            <p>
+                {{movieobj.overview}}
+            </p>
+        </div>
+    </figcaption>
+</div>
