@@ -265,7 +265,7 @@ export let movieArray: Array<Imovies> = [
     popularity: 420.38,
     poster_path: "",
     release_date: "2022-03-10",
-    title: "Turning Red",
+    title: "Fast And Furious X",
     video: false,
     vote_average: 6.4,
     vote_count: 5100

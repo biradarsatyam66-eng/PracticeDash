@@ -19,6 +19,9 @@ import { StdCrudComponent } from './component/std-crud/std-crud.component';
 import { TodoCrudComponent } from './component/todo-crud/todo-crud.component';
 import { MovieDashbordComponent } from './movie-dashbord/movie-dashbord.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
+import { MachineTodoComponent } from './component/machine-todo/machine-todo.component';
+import { MatRippleModule } from "@angular/material/core";
+import { MachineStdComponent } from './component/machine-std/machine-std.component';
 
 
 @NgModule({
@@ -34,7 +37,9 @@ import { MovieCardComponent } from './movie-card/movie-card.component';
     StdCrudComponent,
     TodoCrudComponent,
     MovieDashbordComponent,
-    MovieCardComponent
+    MovieCardComponent,
+    MachineTodoComponent,
+    MachineStdComponent
   ],
   imports: [
     BrowserModule,
@@ -43,8 +48,9 @@ import { MovieCardComponent } from './movie-card/movie-card.component';
     MatButtonModule,
     MatIconModule,
     FormsModule,
-    MatSnackBarModule
-  ],
+    MatSnackBarModule,
+    MatRippleModule
+],
   providers: [],
   bootstrap: [AppComponent]
 })

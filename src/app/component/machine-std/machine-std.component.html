@@ -1,0 +1,83 @@
+<h3 class="text-center"><strong class="text-danger border-bottom border-danger">STD CRUD</strong></h3>
+<hr class="bg-primary">
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div class="form-group">
+            <label for="fname">FIRST NAME</label>
+            <input 
+            [(ngModel)]="fname"
+            type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="lname">LAST NAME</label>
+            <input 
+            [(ngModel)]="lname"
+            type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="contact">CONTACT</label>
+            <input 
+            [(ngModel)]="contact"
+            type="number" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="email">EMAIL</label>
+            <input 
+            [(ngModel)]="email"
+            type="text" class="form-control">
+        </div>
+
+        <div>
+            <button 
+            *ngIf="!isineditmode"
+            (click)="onADD()"
+            mat-raised-button color="primary" class="w-100">ADD STD</button>
+
+            <button 
+            *ngIf="isineditmode"
+            (click)="onUPDATE()"
+            mat-raised-button color="warn" class="w-100">UPDATE STD</button>
+        </div>
+    </div>
+
+    <div class="col-md-12 mt-3">
+        <div class="table table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead *ngIf="stdarr.length > 0;else nostd" class="text-center">
+                    <tr>
+                        <th>SR NO</th>
+                        <th>FULL NAME</th>
+                        <th>CONTACT</th>
+                        <th>EMAIL</th>
+                        <th>EDIT</th>
+                        <th>DELETE</th>
+                    </tr>
+                </thead>
+
+                <tbody class="text-center">
+                    <tr *ngFor="let std of stdarr; index as i">
+                        <td>{{i+1}}</td>
+                        <td>{{std.fname}} {{std.lname}}</td>
+                        <td>{{std.contact}}</td>
+                        <td>{{std.email}}</td>
+                        <td><button 
+                            (click)="onEdit(std)"
+                            mat-icon-button color="primary"><mat-icon>edit</mat-icon></button></td>
+
+                        <td><button 
+                            (click)="onDelete(std.stdId)"
+                            mat-icon-button color="primary"><mat-icon>delete</mat-icon></button></td>
+                    </tr>
+                </tbody>
+
+                <ng-template #nostd>
+                    <h3 class="alert alert-warning">NO FOUND DATA CURRENTLY !!!!</h3>
+                </ng-template>
+            </table>
+        </div>
+    </div>
+</div>
