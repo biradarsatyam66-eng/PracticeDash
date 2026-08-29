@@ -18,10 +18,13 @@ import { MobileCardComponent } from './component/mobile-card/mobile-card.compone
 import { StdCrudComponent } from './component/std-crud/std-crud.component';
 import { TodoCrudComponent } from './component/todo-crud/todo-crud.component';
 import { MovieDashbordComponent } from './movie-dashbord/movie-dashbord.component';
-import { MovieCardComponent } from './movie-card/movie-card.component';
+import { MovieCardComponent } from './component/movie-card/movie-card.component';
 import { MachineTodoComponent } from './component/machine-todo/machine-todo.component';
 import { MatRippleModule } from "@angular/material/core";
 import { MachineStdComponent } from './component/machine-std/machine-std.component';
+import { TodoIOListComponent } from './component/todo-io-list/todo-io-list.component';
+import { TodoIOFormComponent } from './component/todo-io-form/todo-io-form.component';
+import { TodoIODashbordComponent } from './component/todo-io-dashbord/todo-io-dashbord.component';
 
 
 @NgModule({
@@ -39,7 +42,10 @@ import { MachineStdComponent } from './component/machine-std/machine-std.compone
     MovieDashbordComponent,
     MovieCardComponent,
     MachineTodoComponent,
-    MachineStdComponent
+    MachineStdComponent,
+    TodoIOListComponent,
+    TodoIOFormComponent,
+    TodoIODashbordComponent
   ],
   imports: [
     BrowserModule,

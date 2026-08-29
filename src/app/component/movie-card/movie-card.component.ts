@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Imovies } from '../model/movie.interface';
+import { Imovies } from '../../model/movie.interface';
 
 @Component({
   selector: 'app-movie-card',

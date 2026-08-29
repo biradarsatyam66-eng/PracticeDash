@@ -1,0 +1,24 @@
+<ul class="list-group" *ngIf="todoitem.length > 0;else noitem">
+    <li 
+    *ngFor="let todo of todoitem"
+    class="list-group-item font-weight-bold d-flex justify-content-between">
+    
+        <strong class="bg-warning p-2 rounded">{{todo.todoitem}}</strong>
+
+        <div>
+            <button
+            (click)="ontodoedit(todo)"
+            mat-stroked-button color="primary"><mat-icon>edit</mat-icon></button>
+
+            <button 
+            (click)="onDelete(todo.todoid)"
+            mat-stroked-button color="warn"><mat-icon>delete</mat-icon></button>
+        </div>
+    </li>
+</ul>
+<ng-template #noitem>
+    <p class="alert alert-warning">
+        NO TODOITEM CUCCENTLY !!!
+    </p>
+</ng-template>
+
