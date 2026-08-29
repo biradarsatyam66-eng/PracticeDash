@@ -1,0 +1,23 @@
+<h3 class="text-center text-white bg-primary p-2 rounded">{{isineditmode ? 'UPDATE_TODO':'ADD TODO'}}</h3>
+
+<form #todoform="ngForm" (ngSubmit)="ontodoAdd()">
+    <div class="form-group">
+        <label for="todoitem">TODO ITEM :-</label>
+        <input 
+        ngModel
+        name="todoitem"
+        type="text" class="form-control">
+    </div>
+
+    <div>
+        <button 
+        *ngIf="!isineditmode"
+        mat-raised-button color="primary" class="w-100">ADD TODO</button>
+
+        <button 
+        *ngIf="isineditmode"
+        (click)="onUpdate()"
+        mat-raised-button color="accent" class="w-100">UPDATE TODO</button>
+    </div>
+</form>
+

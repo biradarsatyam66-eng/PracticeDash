@@ -25,6 +25,9 @@ import { MachineStdComponent } from './component/machine-std/machine-std.compone
 import { TodoIOListComponent } from './component/todo-io-list/todo-io-list.component';
 import { TodoIOFormComponent } from './component/todo-io-form/todo-io-form.component';
 import { TodoIODashbordComponent } from './component/todo-io-dashbord/todo-io-dashbord.component';
+import { TodoIoTwoDashboardComponent } from './component/todo-io-two-dashboard/todo-io-two-dashboard.component';
+import { TodoIdTwoFormComponent } from './component/todo-io-two-dashboard/todo-id-two-form/todo-id-two-form.component';
+import { TodoIoTwoListComponent } from './component/todo-io-two-dashboard/todo-io-two-list/todo-io-two-list.component';
 
 
 @NgModule({
@@ -45,7 +48,10 @@ import { TodoIODashbordComponent } from './component/todo-io-dashbord/todo-io-da
     MachineStdComponent,
     TodoIOListComponent,
     TodoIOFormComponent,
-    TodoIODashbordComponent
+    TodoIODashbordComponent,
+    TodoIoTwoDashboardComponent,
+    TodoIdTwoFormComponent,
+    TodoIoTwoListComponent
   ],
   imports: [
     BrowserModule,
