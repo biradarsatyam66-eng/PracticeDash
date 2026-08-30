@@ -1,0 +1,22 @@
+<ul 
+*ngIf="getTodoItem.length > 0 ; else nodata"
+class="list-group">
+    <li 
+    *ngFor="let todo of getTodoItem" 
+    class="list-group-item d-flex justify-content-between font-weight-bold">{{todo.todoitem}}
+
+        <div>
+            <button 
+            (click)="onEdit(todo)"
+            mat-button color="primary"><mat-icon>edit</mat-icon></button>
+
+            <button 
+            (click)="onDelete(todo.todoid)"
+            mat-button color="warn"><mat-icon>delete</mat-icon></button>
+        </div>
+    </li>
+</ul>
+
+<ng-template #nodata>
+    <p class="alert alert-warning">NO TODO FOUND CURRENTLY !!!!</p>
+</ng-template>

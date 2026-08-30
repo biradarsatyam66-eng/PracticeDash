@@ -11,13 +11,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { OneComponent } from './component/one/one.component';
 import { TwoComponent } from './component/two/two.component';
-import { PostDashboardComponent } from './component/post-dashboard/post-dashboard.component';
-import { PostCardComponent } from './component/post-card/post-card.component';
 import { MobileDashboardComponent } from './component/mobile-dashboard/mobile-dashboard.component';
 import { MobileCardComponent } from './component/mobile-card/mobile-card.component';
 import { StdCrudComponent } from './component/std-crud/std-crud.component';
 import { TodoCrudComponent } from './component/todo-crud/todo-crud.component';
-import { MovieDashbordComponent } from './movie-dashbord/movie-dashbord.component';
+import { MovieDashbordComponent } from './component/movie-dashbord/movie-dashbord.component';
 import { MovieCardComponent } from './component/movie-card/movie-card.component';
 import { MachineTodoComponent } from './component/machine-todo/machine-todo.component';
 import { MatRippleModule } from "@angular/material/core";
@@ -28,6 +26,12 @@ import { TodoIODashbordComponent } from './component/todo-io-dashbord/todo-io-da
 import { TodoIoTwoDashboardComponent } from './component/todo-io-two-dashboard/todo-io-two-dashboard.component';
 import { TodoIdTwoFormComponent } from './component/todo-io-two-dashboard/todo-id-two-form/todo-id-two-form.component';
 import { TodoIoTwoListComponent } from './component/todo-io-two-dashboard/todo-io-two-list/todo-io-two-list.component';
+import { MachineTodoIoDashbordComponent } from './component/machine-todo-io-dashbord/machine-todo-io-dashbord.component';
+import { MachineTodoIoFormComponent } from './component/machine-todo-io-dashbord/machine-todo-io-form/machine-todo-io-form.component';
+import { MachineTodoIoListComponent } from './component/machine-todo-io-dashbord/machine-todo-io-list/machine-todo-io-list.component';
+import { StdCrudIoDashbordComponent } from './component/std-crud-io-dashbord/std-crud-io-dashbord.component';
+import { StdCrudIoListComponent } from './component/std-crud-io-dashbord/std-crud-io-list/std-crud-io-list.component';
+import { StdCrudIoFormComponent } from './component/std-crud-io-dashbord/std-crud-io-form/std-crud-io-form.component';
 
 
 @NgModule({
@@ -36,8 +40,6 @@ import { TodoIoTwoListComponent } from './component/todo-io-two-dashboard/todo-i
     MachineTestComponent,
     OneComponent,
     TwoComponent,
-    PostDashboardComponent,
-    PostCardComponent,
     MobileDashboardComponent,
     MobileCardComponent,
     StdCrudComponent,
@@ -51,7 +53,13 @@ import { TodoIoTwoListComponent } from './component/todo-io-two-dashboard/todo-i
     TodoIODashbordComponent,
     TodoIoTwoDashboardComponent,
     TodoIdTwoFormComponent,
-    TodoIoTwoListComponent
+    TodoIoTwoListComponent,
+    MachineTodoIoDashbordComponent,
+    MachineTodoIoFormComponent,
+    MachineTodoIoListComponent,
+    StdCrudIoDashbordComponent,
+    StdCrudIoListComponent,
+    StdCrudIoFormComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <app-std-crud-io-form
+        (emitnewStd)="getnewstd($event)"
+        [geteditobj]="editObj"
+        (emitupdatestd)="gteupdatestd($event)"
+        ></app-std-crud-io-form>
+    </div>
+</div>
+<hr class="bg-primary">
+<div class="row">
+    <div class="col-md-12">
+        <app-std-crud-io-list
+        [ongetStd]="stdarr"
+        (emitEditobj)="geteditobj($event)"
+        (emitdeletobj)="gtedeleteobj($event)"
+        ></app-std-crud-io-list>
+    </div>
+</div>

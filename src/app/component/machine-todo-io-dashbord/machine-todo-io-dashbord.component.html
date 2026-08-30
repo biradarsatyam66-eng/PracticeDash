@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <app-machine-todo-io-form
+        (emitNewTodo)="getNewtodo($event)"
+        [edittodoobj]="editobj"
+        (emitUpdateObj)="getupdateobj($event)"
+        ></app-machine-todo-io-form>
+    </div>
+</div>
+<hr class="bg-primary">
+<div class="row">
+    <div class="col-md-12">
+        <app-machine-todo-io-list
+        [getTodoItem]="todoarr"
+        (emitEditObj)="geteditobj($event)"
+        (emitDeleteobj)="getdeleteobj($event)"
+        ></app-machine-todo-io-list>
+    </div>
+</div>

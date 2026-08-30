@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Imovies } from '../model/movie.interface';
-import { movieArray } from '../const/movie';
+import { Imovies } from '../../model/movie.interface';
+import { movieArray } from '../../const/movie';
 
 @Component({
   selector: 'app-movie-dashbord',

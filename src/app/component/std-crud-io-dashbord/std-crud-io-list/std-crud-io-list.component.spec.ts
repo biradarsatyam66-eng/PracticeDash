@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PostDashboardComponent } from './post-dashboard.component';
+import { StdCrudIoListComponent } from './std-crud-io-list.component';
 
-describe('PostDashboardComponent', () => {
-  let component: PostDashboardComponent;
-  let fixture: ComponentFixture<PostDashboardComponent>;
+describe('StdCrudIoListComponent', () => {
+  let component: StdCrudIoListComponent;
+  let fixture: ComponentFixture<StdCrudIoListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PostDashboardComponent ]
+      declarations: [ StdCrudIoListComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PostDashboardComponent);
+    fixture = TestBed.createComponent(StdCrudIoListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

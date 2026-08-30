@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PostCardComponent } from './post-card.component';
+import { StdCrudIoFormComponent } from './std-crud-io-form.component';
 
-describe('PostCardComponent', () => {
-  let component: PostCardComponent;
-  let fixture: ComponentFixture<PostCardComponent>;
+describe('StdCrudIoFormComponent', () => {
+  let component: StdCrudIoFormComponent;
+  let fixture: ComponentFixture<StdCrudIoFormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PostCardComponent ]
+      declarations: [ StdCrudIoFormComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PostCardComponent);
+    fixture = TestBed.createComponent(StdCrudIoFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
