@@ -32,6 +32,9 @@ import { MachineTodoIoListComponent } from './component/machine-todo-io-dashbord
 import { StdCrudIoDashbordComponent } from './component/std-crud-io-dashbord/std-crud-io-dashbord.component';
 import { StdCrudIoListComponent } from './component/std-crud-io-dashbord/std-crud-io-list/std-crud-io-list.component';
 import { StdCrudIoFormComponent } from './component/std-crud-io-dashbord/std-crud-io-form/std-crud-io-form.component';
+import { StdTwoIoDashbordComponent } from './component/std-two-io-dashbord/std-two-io-dashbord.component';
+import { StdTwoIoListComponent } from './component/std-two-io-dashbord/std-two-io-list/std-two-io-list.component';
+import { StdTwoIoFormComponent } from './component/std-two-io-dashbord/std-two-io-form/std-two-io-form.component';
 
 
 @NgModule({
@@ -59,7 +62,10 @@ import { StdCrudIoFormComponent } from './component/std-crud-io-dashbord/std-cru
     MachineTodoIoListComponent,
     StdCrudIoDashbordComponent,
     StdCrudIoListComponent,
-    StdCrudIoFormComponent
+    StdCrudIoFormComponent,
+    StdTwoIoDashbordComponent,
+    StdTwoIoListComponent,
+    StdTwoIoFormComponent
   ],
   imports: [
     BrowserModule,

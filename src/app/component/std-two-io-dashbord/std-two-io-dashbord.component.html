@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <app-std-two-io-form
+        (emitnewstd)="getnewStd($event)"
+        [EditObj]="editObj"
+        (emitupdatestd)="getupdatestd($event)"
+        ></app-std-two-io-form>
+    </div>
+</div>
+<hr class="bg-primary">
+<div class="row">
+    <div class="col-md-12">
+        <app-std-two-io-list
+        [getstddata]="stdarr"
+        (emiteditobj)="geteditobj($event)"
+        (emitdltObj)="getdlteobj($event)"
+        ></app-std-two-io-list>
+    </div>
+</div>

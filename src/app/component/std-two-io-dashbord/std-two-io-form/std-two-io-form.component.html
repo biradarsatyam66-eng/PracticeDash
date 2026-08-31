@@ -1,0 +1,52 @@
+<div class="card">
+    <div class="card-header d-flex align-items-center">
+        <span><mat-icon color="primary">group_add</mat-icon></span>
+        <h1 class="ml-2 mb-0">{{isinEditMode?'UPDATE STD :-':'ADD STD :-'}}</h1>
+    </div>
+    <div class="card-body">
+        <form #stdForm="ngForm" (ngSubmit)="onAddStd()">
+            <div class="form-group">
+                <label for="fname">FIRST NAME :-</label>
+                <input 
+                ngModel
+                name="fname"
+                type="text" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="lname">LAST NAME :-</label>
+                <input 
+                ngModel
+                name="lname"
+                type="text" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="email">EMAIL :-</label>
+                <input 
+                ngModel
+                name="email"
+                type="text" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="contact">CONTACT :-</label>
+                <input 
+                ngModel
+                name="contact"
+                type="number" class="form-control">
+            </div>
+
+            <div>
+                <button 
+                *ngIf="!isinEditMode"
+                mat-raised-button color="primary" class="btn-block">ADD STD</button>
+
+                <button 
+                *ngIf="isinEditMode"
+                (click)="onUpdate()"
+                mat-raised-button color="accent" class="btn-block">UPDATE STD</button>
+            </div>
+        </form>
+    </div>
+</div>
