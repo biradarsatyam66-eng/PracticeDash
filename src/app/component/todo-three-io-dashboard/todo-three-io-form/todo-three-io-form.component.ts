@@ -22,7 +22,7 @@ export class TodoThreeIoFormComponent implements OnInit,OnChanges {
   constructor(private _snackbar:TodoService) { }
 
   ngOnChanges(changes: SimpleChanges): void {
-      if(changes['EditObj']['currentValue'],this.todoform.invalid){
+      if(changes['EditObj']['currentValue'] && this.todoform.invalid){
         this.isInvalid=false
 
         this.todoform.form.patchValue(changes['EditObj']['currentValue'])
