@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <app-std-three-io-form
+        (emitnewstd)="getnewstd($event)"
+        [EditObj]="editobj"
+        (emitupdateObj)="getupdateobj($event)"
+        ></app-std-three-io-form>
+    </div>
+</div>
+<hr class="bg-primary">
+<div class="row">
+    <div class="col-md-12">
+        <app-std-three-io-table
+        [getstdInfo]="stdarr"
+        (emiteditobj)="geteditobj($event)"
+        (emitdeleteobj)="getdeleteobj($event)"
+        ></app-std-three-io-table>
+    </div>
+</div>

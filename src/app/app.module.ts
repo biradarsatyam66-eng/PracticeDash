@@ -35,6 +35,12 @@ import { StdCrudIoFormComponent } from './component/std-crud-io-dashbord/std-cru
 import { StdTwoIoDashbordComponent } from './component/std-two-io-dashbord/std-two-io-dashbord.component';
 import { StdTwoIoListComponent } from './component/std-two-io-dashbord/std-two-io-list/std-two-io-list.component';
 import { StdTwoIoFormComponent } from './component/std-two-io-dashbord/std-two-io-form/std-two-io-form.component';
+import { StdThreeIoDashboardComponent } from './component/std-three-io-dashboard/std-three-io-dashboard.component';
+import { StdThreeIoFormComponent } from './component/std-three-io-dashboard/std-three-io-form/std-three-io-form.component';
+import { StdThreeIoTableComponent } from './component/std-three-io-dashboard/std-three-io-table/std-three-io-table.component';
+import { TodoThreeIoDashboardComponent } from './component/todo-three-io-dashboard/todo-three-io-dashboard.component';
+import { TodoThreeIoFormComponent } from './component/todo-three-io-dashboard/todo-three-io-form/todo-three-io-form.component';
+import { TodoThreeIoListComponent } from './component/todo-three-io-dashboard/todo-three-io-list/todo-three-io-list.component';
 
 
 @NgModule({
@@ -65,7 +71,13 @@ import { StdTwoIoFormComponent } from './component/std-two-io-dashbord/std-two-i
     StdCrudIoFormComponent,
     StdTwoIoDashbordComponent,
     StdTwoIoListComponent,
-    StdTwoIoFormComponent
+    StdTwoIoFormComponent,
+    StdThreeIoDashboardComponent,
+    StdThreeIoFormComponent,
+    StdThreeIoTableComponent,
+    TodoThreeIoDashboardComponent,
+    TodoThreeIoFormComponent,
+    TodoThreeIoListComponent
   ],
   imports: [
     BrowserModule,

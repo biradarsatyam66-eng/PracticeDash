@@ -11,6 +11,7 @@ export class TodoService {
   onSnackBarShow(message: string) {
     this._snackBar.open(message, 'close', {
       duration: 2000,
+      panelClass:'style',
       horizontalPosition: 'left',
       verticalPosition: 'top'
     });
